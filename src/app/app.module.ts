@@ -8,6 +8,7 @@ import { PersonasComponent } from './personas/personas.component';
 import { TargetComponent } from './target/target.component';
 import { UrlconparametroComponent } from './urlconparametro/urlconparametro.component';
 import { ErrorComponent } from './error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Importar librerias de ruteo
 import { Routes, RouterModule } from '@angular/router';
@@ -35,7 +36,7 @@ const routes : Routes = [
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

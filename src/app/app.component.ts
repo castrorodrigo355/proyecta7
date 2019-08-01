@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductosService } from './servicio/productos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,21 @@ export class AppComponent {
   productos: any;
   constructor(public productosService: ProductosService){
     // console.log(JSON.stringify(productosService.productos.rows))
-    this.productos = productosService.productos.rows;
+    this.productos = productosService.productos;
+  }
+
+  visualizarPersona(id){
+    const productos = this.productos.filter(producto => {
+      return producto._id == id
+    })
+    console.log(productos[0])
+  }
+
+  eliminarPersona(id){
+    const productos = this.productos.filter(producto => {
+      return producto._id != id
+    })
+    this.productos = productos;
   }
 
 }
