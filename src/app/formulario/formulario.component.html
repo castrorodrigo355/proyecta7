@@ -1,0 +1,27 @@
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="form-group form-check">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre">
+                </div>
+                <div class="form-group form-check">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese apellido">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group form-check">
+                    <input type="number" class="form-control" id="edad" name="edad" placeholder="Ingrese edad">
+                </div>
+                <div class="form-group form-check">
+                    <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese dni">
+                </div>      
+            </div>
+        </div>
+        <div class="row">
+            <div class="col form-group form-check">
+                <button type="button" (click)="funcAceptar()" class="btn btn-outline-danger">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<div class="form-group form-check" style="background: beige">
+    <div *ngFor= "let tecn of tecnologias">
+        <div *ngIf="tecn.id==1; else opcion2">
+            
+            <div class="row">
+            <div class="col-4">
+                <p>{{tecn.nombre}}</p>
+            </div>
+            <div class="col-8">
+                <img width="90px" src="{{tecn.imagen}}">
+            </div>
+            </div>
+        </div>
+        <ng-template #opcion2>
+            <div class="row">
+                <div class="col-8">
+                <img width="90px" src="{{tecn.imagen}}">
+                </div>  
+                <div class="col-4">
+                <p>{{tecn.nombre}}</p>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

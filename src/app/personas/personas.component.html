@@ -1,0 +1,5 @@
+<div style="margin: 15px;background: beige; padding: 15px">
+        <select class="form-control" id="selector" (change)="eventoSelector($event)">
+                <option *ngFor= "let persona of personas" value="{{persona.id}}">{{persona.nombre}}</option>
+        </select>
+</div>
