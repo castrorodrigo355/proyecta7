@@ -27,5 +27,22 @@
   <app-personas></app-personas> 
   <app-formulario></app-formulario>
   <app-tecnologias></app-tecnologias> -->
-  
+
+  <h1>Listado de productos</h1>
+  <table class="table table-border">
+    <thead>
+        <tr style="background:gray">
+          <td>ID</td>
+          <td>Marca</td> 
+          <td>Nombre</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{producto.value._id}}</td>
+          <td>{{producto.value.marca}}</td>
+          <td>{{producto.value.nombre}}</td>
+        </tr>
+    </tbody>
+  </table>
 </div>

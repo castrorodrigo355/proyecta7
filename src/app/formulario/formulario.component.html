@@ -1,27 +1,35 @@
-<div class="container">
-    <form>
+<!-- <div class="container">
+    <form [formGroup]="formulario" (submit)="onSubmit(formulario)">
         <div class="row">
             <div class="col">
                 <div class="form-group form-check">
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre">
+                    <input type="text" class="form-control" formControlName="nombre" id="nombre" name="nombre" placeholder="Ingrese nombre">
                 </div>
                 <div class="form-group form-check">
-                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingrese apellido">
+                    <input type="text" class="form-control" formControlName="apellido" id="apellido" name="apellido" placeholder="Ingrese apellido">
                 </div>
             </div>
             <div class="col">
-                <div class="form-group form-check">
-                    <input type="number" class="form-control" id="edad" name="edad" placeholder="Ingrese edad">
+                    <div class="form-group">
+                        <input type="number" class="form-control" formControlName="edad" id="edad" placeholder="Ingrese edad">
+                    </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" formControlName="email" id="email" aria-describedby="emailHelp" placeholder="Ingrese email">
                 </div>
-                <div class="form-group form-check">
-                    <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese dni">
-                </div>      
             </div>
         </div>
         <div class="row">
             <div class="col form-group form-check">
-                <button type="button" (click)="funcAceptar()" class="btn btn-outline-danger">Enviar</button>
+                <button type="submit" class="btn btn-outline-danger">Enviar</button>
             </div>
         </div>
     </form>
-</div>
+</div> -->
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" formControlName="firstName">
+    <label for="apellido">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" formControlName="lastName">
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
